@@ -1,2 +1,2 @@
 # dtMoney
-Contas a Pagar e Receber em React
+Contas a Pagar e Receber com React e Typescript
