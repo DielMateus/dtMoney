@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 …or create a new repository on the command line
 echo "# dtMoney" >> README.md
 git init
@@ -9,4 +10,17 @@ git push -u origin main
 …or push an existing repository from the command line
 git remote add origin https://github.com/DielMateus/dtMoney.git
 git branch -M main
+=======
+…or create a new repository on the command line
+echo "# dtMoney" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/DielMateus/dtMoney.git
+git push -u origin main
+…or push an existing repository from the command line
+git remote add origin https://github.com/DielMateus/dtMoney.git
+git branch -M main
+>>>>>>> 6b6c94f6661fd01cbec8d71f3a260f38914836a1
 git push -u origin main
