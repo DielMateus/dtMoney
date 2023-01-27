@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Modal from 'react-modal';
 import { Dashboard } from "./components/Dashboard";
 import { Header } from "./components/Header";
+import { NewTransactionModal } from './components/NewTransactionModal';
 import { GlobalStyle } from "./styles/global";
 
 // Por questões de acessibilidade e por que a documentação recomenda vamos executar o root fora da função App, a modal estará por cima
@@ -23,14 +24,11 @@ export function App() {
   return (
     <>
       <Header onOpenNewTransactionModal={handleOpenNewTransactionModal} />
-      <Dashboard />
-
-      <Modal
-        isOpen={isNewTransactionModalOpen} /*Estava dando erro por que temos que passar o estado dizendo que estará aberto: isNewTransactionModalOpen  */
-        onRequestClose={handleCloseNewTransactionModal} /*quando o usuário clicar em fechar(clicar na parte branca ou em ESC) */
-      >
-        <h2>Cadastrar transação</h2>
-      </Modal>
+      <Dashboard /> {/* Summary está importado dentro do Dashboard, por isso só importa o Dashboard */}
+     <NewTransactionModal 
+        isOpen={isNewTransactionModalOpen}
+        onRequestClose={handleCloseNewTransactionModal}
+     />
 
       <GlobalStyle />
     </>

@@ -9,6 +9,7 @@ table {
     width: 100%;
     border-spacing: 0 0.5rem;
 
+    /* Cabeçalho da tabela */
     th {
         color: var(--text-body);
         font-weight: 400;

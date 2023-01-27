@@ -6,10 +6,10 @@ export const Container = styled.header`
 
 export const Content = styled.div`
 max-width: 1120px;
-margin: 0 auto;
+margin: 0 auto; /*Centralizado */
 
 padding: 2rem 1rem 12rem; /*2rem= 32px; 1rem=16px; 12rem= 12*16= 192px */
-display: flex; /*logo e botão alinhados ao centro*/
+display: flex; /*logo e botão alinhados verticalmente ao centro*/
 align-items: center;
 justify-content: space-between; /*espaço entre a logo e o botão*/
 
@@ -25,7 +25,7 @@ button {
     transition: filter 0.2s; /*deixar a transição mais leve ao passar o mouse por cima */
 
     &:hover {
-        filter: brightness(0.9); /*leve escurecida o background e a fontequando passa o mouse no botão */
+        filter: brightness(0.9); /*leve escurecida o background e a fonte quando passa o mouse no botão */
     }
 }
 `

@@ -25,10 +25,10 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
 }
 
-/* Font-size: 16px (Desktop) */
+/* Font-size: 16px (Desktop)   REM = 1rem = 16px*/
 html {
     @media (max-width: 1080px){
-        font-size: 93.75%; /*16*0,9375 = 15px ==> Baseia-se no tamanho da tela do usuário*/
+        font-size: 93.75%; /*16*0,9375 = 15px ==> Baseia-se no tamanho da tela do usuário, caso o usuário tiver uma fonte maior 15px não vai pegar mas o % SIM*/
     }
     @media (max-width: 720px){
         font-size: 87.5%; /*16*0,875 = 14px */
@@ -50,14 +50,52 @@ h1, h2, h3, h4, h5, h6, strong {
 }
 
 button{
-    cursor: pointer; /*fica clicável */
+    cursor: pointer; /*ficar clicável */
 }
 
 /*Se tiver algum botão ou algo desabilitado */
 [disabled] {
     opacity: 0.6;
-    cursor: not-allowed;
+    cursor: not-allowed; /*Setinha de não permitido */
 }
 
+/* Estilização da Modal início */
+.react-modal-overlay {
+    background: rgba(0,0,0, 0.5); /*50% de opacidade em preto */
+
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.react-modal-content {
+    width: 100%;
+    max-width: 576px;
+    background: var(--background);
+    padding: 3rem;
+    position: relative;
+    border-radius: 0.24rem;
+}
+
+.react-modal-close {
+    position: absolute;
+    right: 1.5rem;
+    top: 1.5rem;
+    border: 0;
+    background: transparent;
+
+    transition: filter 0.2s;
+
+    &:hover {
+        filter: brightness(0.8);
+    }
+}
+/* Estilização da Modal Fim */
 `
 
