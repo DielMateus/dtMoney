@@ -10,7 +10,7 @@ createServer({
 
   seeds(server){
     server.db.loadData({
-      transactions: [
+      transactions: [  /*transactions é sempre o nome da model(linha 8) só que no plural */
         {
           id: 1,
           title: 'Freelance de Website',

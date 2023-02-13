@@ -1,25 +1,10 @@
-import { useEffect, useState } from "react";
+
+import { useTransactions } from "../../hooks/useTransactions";
 import { Container } from "./styles";
-import { api } from './../../services/api';
-
-
-interface Transaction {
-    id: number;
-    title: string;
-    amount: number;
-    type: string;
-    category: string;
-    createdAt: string;
-}
 
 export function TransactionsTable() {
-    const [transactions, setTransactions] = useState<Transaction[]>([]); /*O meu estado vai armazenar um array de Transaction, que foi preciso criar a Interface Transaction */
-
-    useEffect(() => {
-        api.get('transactions')
-            .then(response => setTransactions(response.data.transactions))
-    }, []);
-
+    /*Para parar o erro é só desestruturar ou seja colocar as chaves por volta do { transactions } ou seja colocar um objeto por volta */
+    const { transactions } = useTransactions()
     return (
         <Container>
             <table>
